@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Project</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="notes">Notes fragment</string>
+
+    <string name="tasks">Tasks fragment</string>
+</resources>
