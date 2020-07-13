@@ -58,13 +58,13 @@ public class NotesFragment extends Fragment {
 
         notesList.addAll(db.getAllNotes());
 
-//        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showNoteDialog(false, null, -1);
-//            }
-//        });
+        FloatingActionButton fab = (FloatingActionButton) v.findViewById(R.id.fab_note);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showNoteDialog(false, null, -1);
+            }
+        });
 
         mAdapter = new NotesAdapter(getContext(), notesList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
