@@ -38,6 +38,9 @@ public class TaskFragment extends Fragment implements View.OnClickListener {
     private List<View> cards = new ArrayList<>();
     private List<String> checkboxes = new ArrayList<>();
     Contracts.ContractDBHelper dbHelper;
+    private Button add_btn;
+
+
     public TaskFragment() {
     }
 
@@ -49,6 +52,13 @@ public class TaskFragment extends Fragment implements View.OnClickListener {
         text = v.findViewById(R.id.task_name);
         layout = v.findViewById(R.id.l_layout);
         text.setOnClickListener(this);
+        add_btn = v.findViewById(R.id.add_btn);
+        add_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AddTask();
+            }
+        });
         dbHelper = new Contracts.ContractDBHelper(getContext());
         return v;
     }
@@ -134,10 +144,6 @@ public class TaskFragment extends Fragment implements View.OnClickListener {
             layout.addView(v);
             cards.add(v);
             text.setText("");
-        }
-        else
-        {
-
         }
     }
 
