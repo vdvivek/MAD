@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.OnFr
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.addTab(tabLayout.newTab().setText("Tasks"));
         tabLayout.addTab(tabLayout.newTab().setText("Notes"));
+        tabLayout.addTab(tabLayout.newTab().setText("Calculator"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());

@@ -1,8 +1,5 @@
 package com.example.todo;
 
-import android.util.Log;
-import android.widget.Toast;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -28,6 +25,10 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 NotesFragment nf = new NotesFragment();
                 return  nf;
+
+            case 2:
+                CalcFragment cf = new CalcFragment();
+                return  cf;
 
             default:
                 return null;
